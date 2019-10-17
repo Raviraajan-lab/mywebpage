@@ -7,84 +7,47 @@ Solution for Assignment 1
 ==================================================
 -->
 
-<html lang = "en-US">
-	<title>Memories</title>  <!--Title of the Web Page-->
+<html>
+<head>
+    <title>Temperature Conversion</title>
+</head>   
+
+<h1 style="color: indigo;font-family: Arial">Temperature Conversion</h1>
+<script>
+		function myTemp() {
+        var temperature = parseFloat(prompt("Enter Temperature"));
+        var source = prompt("Enter Source Scale");
+        var target = prompt("Enter Target Scale");
+        var targetTemp = temperature;
+        if((source.toUpperCase() == "C" || source.toUpperCase() == "CELSIUS" || source.toUpperCase() == "F" || source.toUpperCase() == "FAHRENHEIT" || source.toUpperCase() == "K" || source.toUpperCase() == "KELVIN")
+        && (target.toUpperCase() == "C" || target.toUpperCase() == "CELSIUS" || target.toUpperCase() == "F" || target.toUpperCase() == "FAHRENHEIT" || target.toUpperCase() == "K" || target.toUpperCase() == "KELVIN")){
+            if(source.toUpperCase() == "C" || source.toUpperCase() == "CELSIUS"){
+                if(target.toUpperCase() == "F" || target.toUpperCase() == "FAHRENHEIT"){
+                    targetTemp = (temperature * 9 / 5) + 32;
+                }else if(target.toUpperCase() == "K" || target.toUpperCase() == "KELVIN"){
+                    targetTemp = temperature + 273.15;
+                }
+            }else if(source.toUpperCase() == "F" || source.toUpperCase() == "FAHRENHEIT"){
+                if(target.toUpperCase() == "C" || target.toUpperCase() == "CELSIUS"){
+                    targetTemp = (temperature - 32) * 5/9;
+                }else if(target.toUpperCase() == "K" || target.toUpperCase() == "KELVIN"){
+                    targetTemp = (temperature + 459.67) * 5/9;
+                }
+            }else if(source.toUpperCase() == "K" || source.toUpperCase() == "KELVIN"){
+                if(target.toUpperCase() == "C" || target.toUpperCase() == "CELSIUS"){
+                    targetTemp = temperature - 273.15;
+                }else if(target.toUpperCase() == "F" || target.toUpperCase() == "FAHRENHEIT"){
+                    targetTemp = (temperature * 9/5) - 459.67;
+                }
+            }
+            alert( temperature + source + " is " + targetTemp + target + " in Temperature conversion" );
+        }else{
+            alert("Don't recogize the temperature scale");
+        }
+		}
+    </script>
+	<body style="background: lightgray;">
+	<button onclick="myTemp()">Click here for temperture conversion</button>
 	
-	<style>
-	
-		body {
-		background-color:#b4e0b1;
-		}
-		
-		h1{
-		color:#4e6e96;
-		font:bold;
-		font-size:26px;
-		}
-		a:link {   <!-- unvisited link-->
-		color:blue;
-		text-decoration: bold;
-		}
-		
-		a:visited {  <!--visited link-->
-		color:gray;
-		text-decoration: italic;
-		}
-		
-		a:active { <!--Current active link-->
-		color:powderblue;
-		text-decoration:italic;
-		}
-		
-		a:hover {    <!--Mouse cursor on link-->
-		color:green;
-		text-decoration: italic;
-		}
-		
-	</style>	
-		
-		<nav> <!--Navigation Links-- Used to Navigate between Pages-->
-		
-			<a href="a1-Home-Raviraajan-Ravichandar.html">Home</a> |
-			<a href="a1-AboutMe-Raviraajan-Ravichandar.html">AboutMe</a> |
-			<a href="a1-Memories-Raviraajan-Ravichandar.html">Memories</a> | 
-			<a href="a1-HTML Introduction-Raviraajan-Ravichandar.html">HTML-Introduction</a>
-		
-		</nav>
-		<script>
-			function myFavPic(){
-				
-				alert("<img src="20190607_124606000_iOS.jpg" width="400" height ="600">");
-			}
-			
-			<body> <!-- Displays the main contents in webpage-->
-		
-				<h1>Memories</h1> <!--Heading Tag-->
-				<table style="width:100%"> <!--Implemented Table to display pictures-->
-					<tr>
-						<td>
-						<button onclick= "myFavPic()"> Click to view the picture </button>
-						<!--<img src="20190607_124606000_iOS.jpg" width="400" height ="600">-->
-						</td>
-						<td>
-						<img src="20190810_100945027_iOS.jpg" width="400" height ="600">
-						</td> 
-						<td>
-						<img src="20190811_061656795_iOS.jpg" width="400" height ="600">
-						</td>
-					</tr>
-			
-					<tr>
-						<td>
-						<img src="20190810_101548344_iOS.jpg" width="400" height ="600">
-						</td>
-						<td>
-						<img src="20190621_060959000_iOS.jpg" width="400" height ="600">
-						</td> 
-						<td>
-						<img src="20180618_071753933_iOS.jpg" width="400" height ="600">
-						</td>
-					</tr>
-				</table>
-			</body>
+</body>
 </html>
