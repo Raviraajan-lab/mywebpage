@@ -2,10 +2,15 @@
 <head>
     <title>Temperature Conversion</title>
 </head>   
-
 <h1 style="color: indigo;font-family: Arial">Temperature Conversion</h1>
+	<style>
+	button:hover {  <!--Mouse cursor on link-->
+	"background-color:blue; 
+	border-color:red;
+	text-decoration: italic;
+	}
 <script>
-		function myTemp() {
+	function myTemp() {
         var temperature = parseFloat(prompt("Enter Temperature"));
         var source = prompt("Enter Source Scale");
         var target = prompt("Enter Target Scale");
@@ -37,9 +42,9 @@
         }
 		}
     </script>
-	<body style="background: lightgray;">
+
+<body style="background: lightgray;">
 	
-	<button	onclick="myTemp()">Click here for temp convertion</button>
-	
+<button	onclick="myTemp()">Click here for temp convertion</button>			  
 </body>
 </html>
