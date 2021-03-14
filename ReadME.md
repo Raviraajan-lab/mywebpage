@@ -21,5 +21,18 @@ On executing the Schedule Job script, pass one "cuisine_type" at a time with "me
 
 The output produced from API will be in JSON format and than can be converted to CSV format based on the fields/columns we required.
 
+### Folder Information:
+
+1.`FinalDataset` - Have the final dataset created from both the sources.  
+2.`Pre-datasets` - Have two separate datasets created from API and Kaggle extraction.  
+3.`JSON` - Have JSON files of each cuisine types with recipes information extracted from API.  
+4.`csv` - Having respective csv file of each json recipes fetched from API.  
+5.`Kaggle` - It have the `recipes.csv` file used for cleansing and formatted to append with the dataset created through API.  
+
+`Group-Project-code snippets` - contains all code snippets used for preparing the dataset and arranged in sequential order for execution.  
+
+***NOTE*** : Apart from folders you can see some files that are produced during cleansing and processing stages(Can be used for references). 
+
+
 ### Additional Information:
 As mentioned earlier, we used Kaggle dataset to enrich our dataset for analysis purposes(future scope).
