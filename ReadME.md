@@ -1,8 +1,8 @@
 ### Getting Started:
 This dataset provides information on ingredients, nutritional values, meal_type, max_ready time when searched by recipes.The main source of this dataset is `spoonacular.com`. We used additional dataset from Kaggle to enrich the created dataset from the `spoonacular.com`.
 
-The sources are listed below:
-1.`https://spoonacular.com/`
+The sources are listed below:  
+1.`https://spoonacular.com/`  
 2.`https://www.kaggle.com/irkaal/foodcom-recipes-and-reviews`
 
 ### Pre-requisites:
