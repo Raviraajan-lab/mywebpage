@@ -24,15 +24,14 @@ The output produced from API will be in JSON format and than can be converted to
 ### Folder Information:
 
 1.`FinalDataset` - Have the final dataset created from both the sources.  
-2.`Pre-datasets` - Have two separate datasets created from API and Kaggle extraction.  
+2.`Processed Pre-datasets` - Have datasets created from API and Kaggle extraction of individual csv files. Using `dataset_api` & `dataset_kaggle_v1` datasets final `Recipes and Ingredients_V1 `dataset can be created. From `Recipes and Ingredients_V1` dataset, final dataset `Recipes and Ingredients_V2` created by appending "Meal_type" & "Max Ready Time" columns.
 3.`JSON` - Have JSON files of each cuisine types with recipes information extracted from API.  
 4.`csv` - Having respective csv file of each json recipes fetched from API.  
 5.`Kaggle` - It have the `recipes.csv` file used for cleansing and formatted to append with the dataset created through API.  
 
 `Group-Project-code snippets` - contains all code snippets used for preparing the dataset and arranged in sequential order for execution.  
 
-***NOTE*** : Apart from folders you can see some files that are produced during cleansing and processing stages(Can be used for references). 
-
+***NOTE*** : Some files like `datasetkaggle.csv` in `Processed Pre-datasets` folder that are produced during cleansing and processing stages(Can be used for references). 
 
 ### Additional Information:
 As mentioned earlier, we used Kaggle dataset to enrich our dataset for analysis purposes(future scope).
